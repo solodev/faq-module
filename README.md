@@ -119,34 +119,6 @@ Create a calendar for the FAQ and upload the following form
         </div>
     </div>
 </div>
-<?php
-      if(isset($dataVars['calendar_entry_id'])){     
-        $calendar_entry = new Calendar_Entry($dataVars['calendar_entry_id']);
-        if($calendar_entry->path) { 
-    ?>
-<div class="panel-group">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#collapseURL">Post URL <span class="toggle" aria-hidden="true"></span></a>
-            </h4>
-        </div>
-        <div id="collapseURL" class="panel-collapse collapse in">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="subText">You can access this blog post at the following URL:</p>
-                        <a href="https://www.100k-theme.com<?= $calendar_entry->path ?>" target="_blank">https://www.100k-theme.com<?= $calendar_entry->path ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<?php 
-        } 
-      }
-     ?>
 
 <script>
     $('.wysiwyg').ckeditor(function () {}, {
